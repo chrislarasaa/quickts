@@ -31,9 +31,9 @@ const App = () => {
   }, [json]);
 
   return (
-    <div className="grid grid-cols-2 gap-3 bg-gray-900">
+    <div className="grid grid-cols-4 gap-3 bg-gray-900">
       <Editor
-        height={"98vh"}
+        height={"100vh"}
         width={"100%"}
         defaultLanguage="json"
         theme="vs-dark"
@@ -42,15 +42,17 @@ const App = () => {
         value={json}
       />
 
-      <Editor
-        height={"98vh"}
-        width={"100%"}
-        defaultLanguage="typescript"
-        theme="vs-dark"
-        value={tsInterface}
-        defaultValue=""
-        // onChange={(e) => e && setJson(jsonParse(e))}
-      />
+      <div className="col-span-3">
+        <Editor
+          height={"100vh"}
+          width={"100%"}
+          defaultLanguage="typescript"
+          theme="vs-dark"
+          value={tsInterface}
+          defaultValue=""
+          // onChange={(e) => e && setJson(jsonParse(e))}
+        />
+      </div>
     </div>
   );
 };
