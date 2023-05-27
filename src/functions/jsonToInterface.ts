@@ -21,7 +21,7 @@ export const jsonToInterface = (
 
     principalString += "}\n\n";
 
-    return objectStrings.join("\n\n") + principalString;
+    return objectStrings.join("\n\n") + "" + principalString;
   } catch (error) {
     return "";
   }
@@ -76,7 +76,7 @@ const makeEnumString = (key: string, value: unknown[]): string => {
       val as string
     )} = "${val}",\n`;
   }
-  enumString += "}";
+  enumString += "}\n\n";
   return enumString;
 };
 
